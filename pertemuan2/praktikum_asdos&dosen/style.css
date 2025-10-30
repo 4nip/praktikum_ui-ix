@@ -1,0 +1,14 @@
+* {
+    font-family: poppins;
+    text-align: center;
+    color: red ;
+}
+
+.sub-judul {
+     margin-top: -20px;
+}      
+
+td {
+    border: solid black 1px;
+}
+
