@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Artikel dengan CSS Grid</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: antiquewhite;
+            font-size: 1.2em;
+        }
+
+        header {
+            padding: 20px;
+            background-color: orange;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding: 25px;
+            gap: 20px;
+        }
+
+        .main-article {
+            flex: 60%;
+            background-color: white;
+            padding: 25px;
+            margin: 5px;
+            box-shadow:  0 0 5px;
+        }
+
+        .sidebar {
+            flex: 40%;
+        }
+
+        .box {
+            padding: 60px 20px;
+            background-color: rgb(73, 202, 9);
+            margin: 15px 0px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contoh Layout Grid - Artikel & Sidebar</h1>
+    </header>
+
+    <div class="container">
+        <!-- Area kiri -->
+        <div class="main-article">
+            <h2>Judul Artikel Utama</h2>
+            <p>
+                Ini adalah area utama artikel dengan lebar sekitar 60% dari halaman.
+                Menggunakan CSS Grid, kita dapat dengan mudah mengatur layout dua kolom
+                tanpa harus menggunakan Flexbox atau float.
+            </p>
+            <p>
+                Grid sangat fleksibel karena kita bisa mengatur ukuran, baris, kolom, dan jarak
+                antar elemen dengan mudah. Layout ini akan menyesuaikan secara otomatis
+                pada berbagai ukuran layar.
+            </p>
+        </div>
+
+        <!-- Area kanan -->
+        <div class="sidebar">
+            <div class="box">
+                <h3>Artikel Terkait 1</h3>
+                <p>Konten singkat atau ringkasan dari artikel lain.</p>
+            </div>
+            <div class="box">
+                <h3>Artikel Terkait 2</h3>
+                <p>Informasi tambahan yang relevan dengan topik utama.</p>
+            </div>
+            <div class="box">
+                <h3>Artikel Terkait 3</h3>
+                <p>Berita atau tautan eksternal yang masih satu tema.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Contoh CSS Grid Layout</p>
+    </footer>
+</body>
+</html>
