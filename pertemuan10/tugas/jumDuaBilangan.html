@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumlah Dua Bilangan</title>
+    <style>
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: beige;
+    } 
+
+    input {
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">        
+        <label for="bill1">Masukan Angka :</label> <br>
+        <input id="bill1" type="number" placeholder="0" onchange="penjumlahan()" onkeyup="penjumlahan()"> 
+    
+        <h3>+</h3>
+    
+        <label for="bill2">Masukan Angka :</label> <br>
+        <input id="bill2" type="number" placeholder="0" onchange="penjumlahan()" onkeyup="penjumlahan()">
+    
+        <h3> = </h3>
+    
+        <input id="hasil" type="number"  readonly>
+    </div>
+
+<script>
+    function penjumlahan() {
+        const bill1Value = document.getElementById('bill1').value;
+        const bill2Value = document.getElementById('bill2').value;
+
+        const bilangan1 = parseFloat(bill1Value) || 0;
+        const bilangan2 = parseFloat(bill2Value) || 0;
+
+        const total = bilangan1 + bilangan2
+        
+        document.getElementById('hasil').value = total;
+    }
+
+penjumlahan()
+</script>
+
+</body>
+</html>
